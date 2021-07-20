@@ -1,4 +1,5 @@
 #pragma once
+#include "opowell26.h"
 
 // Resuable
 #define ___________________BLANK___________________   _______, _______, _______, _______, _______
@@ -13,6 +14,7 @@
 
 #define _________________QWERTY_R1_________________   KC_Y,    KC_U,    KC_I,    KC_O,    KC_P
 #define _________________QWERTY_R2_________________   KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN
+#define ________________QWERTY_40_R2_______________   KC_H,    KC_J,    KC_K,    KC_L,    KC_QUOT
 #define _________________QWERTY_R3_________________   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLASH
 
 #define _________________LOWER_L1__________________   _______, _______, KC_UP,   _______, _______
