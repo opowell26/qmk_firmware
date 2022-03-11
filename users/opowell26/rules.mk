@@ -5,11 +5,11 @@ ifneq ($(PLATFORM),CHIBIOS)
     LTO_ENABLE        = yes
 endif
 
-ifdef CONSOLE_ENABLE
-    ifeq ($(strip $(KEYLOGGER_ENABLE)), yes)
-        OPT_DEFS += -DKEYLOGGER_ENABLE
-    endif
-endif
+# ifdef CONSOLE_ENABLE
+#     ifeq ($(strip $(KEYLOGGER_ENABLE)), yes)
+#         OPT_DEFS += -DKEYLOGGER_ENABLE
+#     endif
+# endif
 
 RGB_MATRIX_ENABLE ?= no
 ifneq ($(strip $(RGB_MATRIX_ENABLE)), no)
@@ -17,5 +17,5 @@ ifneq ($(strip $(RGB_MATRIX_ENABLE)), no)
 endif
 
 ifeq ($(strip $(OLED_DRIVER_ENABLE)), yes)
-    SRC += oled_stuff.c
+    SRC += oled_animation.c
 endif

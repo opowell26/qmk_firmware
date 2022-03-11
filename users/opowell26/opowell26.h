@@ -20,6 +20,10 @@
 #include "process_records.h"
 #include "wrappers.h"
 
+// #if defined(OLED_ENABLE)
+// #    include "oled/oled_stuff.h"
+// #endif
+
 /* Define layer names */
 enum userspace_layers {
     _QWERTY = 0,
@@ -29,6 +33,10 @@ enum userspace_layers {
     _RAISE,
     _FN,
     _ADJUST,
+};
+
+enum userspace_keycodes {
+    KC_SWAP_CTL_GUI
 };
 
 

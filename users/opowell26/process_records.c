@@ -37,6 +37,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 set_single_persistent_default_layer(keycode - KC_QWERTY);
             }
             break;
+        case KC_SWAP_CTL_GUI:
+            if (record->event.pressed) {
+                keymap_config.swap_lctl_lgui = !keymap_config.swap_lctl_lgui;
+            }
+            break;
     }
     return process_record_keymap(keycode, record);
 };
