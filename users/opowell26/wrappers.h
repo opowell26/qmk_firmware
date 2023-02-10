@@ -1,6 +1,22 @@
 #pragma once
 #include "opowell26.h"
 
+#if (!defined(LAYOUT) && defined(KEYMAP))
+#  define LAYOUT KEYMAP
+#endif
+
+
+// Layout wrappers
+#define LAYOUT_ergodox_wrapper(...)          LAYOUT_ergodox(__VA_ARGS__)
+#define LAYOUT_ergodox_pretty_wrapper(...)   LAYOUT_ergodox_pretty(__VA_ARGS__)
+#define KEYMAP_wrapper(...)                  LAYOUT(__VA_ARGS__)
+#define LAYOUT_wrapper(...)                  LAYOUT(__VA_ARGS__)
+#define LAYOUT_ortho_4x12_wrapper(...)       LAYOUT_ortho_4x12(__VA_ARGS__)
+#define LAYOUT_ortho_5x12_wrapper(...)       LAYOUT_ortho_5x12(__VA_ARGS__)
+
+#define LAYOUT_collide39_base_wrapper(...)   LAYOUT_collide39_base(__VA_ARGS__)
+
+
 // Resuable
 #define ___________________BLANK___________________   _______, _______, _______, _______, _______
 
@@ -45,19 +61,16 @@
 #define ________NUMPAD_R2________                     KC_4, KC_5, KC_6
 #define ________NUMPAD_R3________                     KC_1, KC_2, KC_3
 
-#define _________________GAMING_L1_________________   KC_Q, KC_W, KC_E, KC_R, KC_T,
-#define _________________GAMING_L2_________________   KC_A, KC_S, KC_D, KC_F, KC_G,
-#define _________________GAMING_L3_________________   KC_Z, KC_X, KC_C, KC_V, KC_B,
+#define _________________GAMING_L1_________________   KC_Q, KC_W, KC_E, KC_R, KC_T
+#define _________________GAMING_L2_________________   KC_A, KC_S, KC_D, KC_F, KC_G
+#define _________________GAMING_L3_________________   KC_Z, KC_X, KC_C, KC_V, KC_B
 
-#define _________________GAMING_R1_________________   KC_Y, KC_U, KC_I,    KC_O,   KC_P,
-#define _________________GAMING_R2_________________   KC_H, KC_J, KC_K,    KC_L,   KC_SCLN,
-#define _________________GAMING_R3_________________   KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH,
+#define _________________GAMING_R1_________________   KC_Y, KC_U, KC_I,    KC_O,   KC_P
+#define _________________GAMING_R2_________________   KC_H, KC_J, KC_K,    KC_L,   KC_SCLN
+#define _________________GAMING_R3_________________   KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH
 
-#define _________________GAMING_FL_________________   KC_1,    KC_2,    KC_3,  KC_4,   KC_F5,
-#define _________________GAMING_FR_________________   KC_VOLD, KC_VOLU, KC_F9, KC_F10, KC_F11,
+#define _________________GAMING_FL_________________   KC_1,    KC_2,    KC_3,  KC_4,   KC_F5
+#define _________________GAMING_FR_________________   KC_VOLD, KC_VOLU, KC_F9, KC_F10, KC_F11
 
 #define _________________FROW_LEFT_________________   KC_F1, KC_F2, KC_F3, KC_F4, KC_F5
 #define _________________FROW_RGHT_________________   KC_F6, KC_F7, KC_F8, KC_F9, KC_F10
-
-// Layout wrappers
-#define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)

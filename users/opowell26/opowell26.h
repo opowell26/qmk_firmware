@@ -15,10 +15,12 @@
  */
 
 #pragma once
+
 #include QMK_KEYBOARD_H
-#include "quantum.h"
-#include "process_records.h"
+#include "version.h"
+#include "eeprom.h"
 #include "wrappers.h"
+#include "process_records.h"
 
 // #if defined(OLED_ENABLE)
 // #    include "oled/oled_stuff.h"
